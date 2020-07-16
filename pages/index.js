@@ -3,8 +3,9 @@ import Meta from '@hackclub/meta'
 import Head from 'next/head'
 import Categories from '../components/categories.mdx'
 import Flag from '../components/flag'
+import Posts from '../components/posts'
 
-export default () => (
+export default ({ scraps = [] }) => (
   <>
     <Meta
       as={Head}
@@ -15,7 +16,7 @@ export default () => (
     <Flag />
     <Container
       sx={{
-        pt: [4, 5, null, 6],
+        pt: [5, null, 6],
         pb: [4, null, 5],
         textAlign: 'center',
         color: 'black'
@@ -36,6 +37,7 @@ export default () => (
         July 20–27, 2020
       </Text>
     </Container>
+    <Posts data={scraps} />
     <Container
       sx={{
         ul: {
@@ -44,7 +46,8 @@ export default () => (
           pl: 0,
           mb: 4,
           listStyle: 'none',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(256px, 1fr))'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(128px, 1fr))',
+          textAlign: 'center'
         },
         li: { variant: 'cards.primary' }
       }}
@@ -53,6 +56,8 @@ export default () => (
         Categories
       </Heading>
       <Categories />
+    </Container>
+    <Container variant="narrow">
       <Heading as="h2" variant="headline" sx={{ textAlign: 'center' }}>
         Judges
       </Heading>
@@ -60,7 +65,8 @@ export default () => (
         columns={[null, 2]}
         gap={3}
         sx={{
-          my: 2,
+          pt: 2,
+          pb: 4,
           img: { mr: 3 },
           div: { placeItems: 'center', fontSize: 2 }
         }}
@@ -85,3 +91,28 @@ export default () => (
     </Container>
   </>
 )
+
+export const getStaticProps = async () => {
+  let scraps = []
+  const {
+    take,
+    takeRight,
+    takeLeft,
+    filter,
+    shuffle,
+    orderBy,
+    map
+  } = require('lodash')
+  let posts = await fetch('https://scrapbook.hackclub.com/api/r/art')
+    .then(r => r.json())
+    .then(posts => orderBy(posts, 'postedAt', 'desc'))
+    .then(posts =>
+      filter(posts, p =>
+        ['image/jpg', 'image/jpeg', 'image/png'].includes(
+          p.attachments?.[0]?.type
+        )
+      )
+    )
+  scraps = take(posts, 16)
+  return { props: { scraps }, unstable_revalidate: 8 }
+}
