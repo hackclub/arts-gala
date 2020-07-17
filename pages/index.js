@@ -22,6 +22,9 @@ export default ({ scraps = [] }) => (
         color: 'black'
       }}
     >
+      <Text as="p" variant="subtitle" sx={{ variant: 'layout.narrow', mb: [3, 4] }}>
+        Welcome to the
+      </Text>
       <Heading
         as="h1"
         variant="title"
