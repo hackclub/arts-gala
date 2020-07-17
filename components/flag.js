@@ -19,7 +19,7 @@ const Base = styled('a')`
   cursor: pointer;
   display: inline-block;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 24px;
   flex-shrink: 0;
   width: 112px;
