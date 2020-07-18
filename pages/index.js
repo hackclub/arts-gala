@@ -30,7 +30,7 @@ export default ({ scraps = [] }) => (
         Hack Club Fine Arts Gala
       </Heading>
       <Text as="p" variant="subtitle" sx={{ variant: 'layout.narrow' }}>
-        A weeklong celebration of remarkable artists in the esteemed Orpheus  
+        A weeklong celebration of remarkable artists in the esteemed Orpheus
         tradition.
       </Text>
       <Text as="p" sx={{ variant: 'layout.narrow', color: 'muted', mt: 3 }}>
