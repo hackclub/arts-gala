@@ -1,0 +1,10 @@
+{
+  "public": true,
+  "github": { "silent": true },
+  "rewrites": [
+    {
+      "source": "/arts-gala/_next/:path*",
+      "destination": "/_next/:path*"
+    }
+  ]
+}
