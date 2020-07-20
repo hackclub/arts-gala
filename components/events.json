@@ -1,0 +1,46 @@
+[
+  {
+    "id": "recRR0dFc4Ec2uMYe",
+    "slug": "art-in-the-dark-1",
+    "title": "Art in the Dark",
+    "desc": "How well can you create when your art keeps disappearing? Enter in this event to try and win the “The Best Blindfolded Art Work” award!",
+    "leader": "@amogh",
+    "cal": "https://www.google.com/calendar/render?action=TEMPLATE&text=Art%20in%20the%20Dark&details=A%20Hack%20Club%20Event%20by%20@amogh&dates=20200721T000000Z%2F20200721T010000Z",
+    "start": "2020-07-21T00:00:00.000Z",
+    "end": "2020-07-21T01:00:00.000Z",
+    "avatar": "https://dl.airtable.com/.attachmentThumbnails/62ecff6264c8a5b6804c5339d28d8a5e/036a8f96"
+  },
+  {
+    "id": "recC2b7ldXOAttHvm",
+    "slug": "recreating-famous-paintings-with-orpheus",
+    "title": "Recreating Famous Paintings with Orpheus",
+    "desc": "It is time to pass the torch to the next generation of Dino Drawers. Hop on this call, make some famous paintings even better with Orpheus, and have a blast by recreating famous paintings. Enter in this event to try and win the “Famous Dino Drawing Award.”\n",
+    "leader": "@ClaireBookworm",
+    "cal": "https://www.google.com/calendar/render?action=TEMPLATE&text=Recreating%20Famous%20Paintings%20with%20Orpheus&details=A%20Hack%20Club%20Event%20by%20@ClaireBookworm&dates=20200723T000000Z%2F20200723T010000Z",
+    "start": "2020-07-23T00:00:00.000Z",
+    "end": "2020-07-23T01:00:00.000Z",
+    "avatar": "https://dl.airtable.com/.attachmentThumbnails/4d2409dc7c6ff974c4e0bbe7a1288cd7/041adddd"
+  },
+  {
+    "id": "reccejNaqw9VSKk74",
+    "slug": "bob-ross-follow-along",
+    "title": "Bob Ross Follow Along",
+    "desc": "It’s time for Hack Club to pay homage to one of the greatest painters of all time, by hopping on a zoom call, pulling up a bob ross video, and painting together. Let’s learn how to paint from the icon himself! Enter in this event, paint along with Bob Ross, and try and win the “Bob Ross Protege” award.\n",
+    "leader": "@amogh",
+    "cal": "https://www.google.com/calendar/render?action=TEMPLATE&text=Bob%20Ross%20Follow%20Along&details=A%20Hack%20Club%20Event%20by%20@amogh&dates=20200725T000000Z%2F20200725T010000Z",
+    "start": "2020-07-25T00:00:00.000Z",
+    "end": "2020-07-25T01:00:00.000Z",
+    "avatar": "https://dl.airtable.com/.attachmentThumbnails/62ecff6264c8a5b6804c5339d28d8a5e/036a8f96"
+  },
+  {
+    "id": "recnnpz3A4aUqgcm6",
+    "slug": "the-hack-club-art-gala",
+    "title": "The Hack Club Art Gala",
+    "desc": "To end Art Week, we have an awesome Gala with the entire hack club community. Dress up, grab your dinner, hang out, discuss art, and we will announce the winners.",
+    "leader": "@amogh",
+    "cal": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Hack%20Club%20Art%20Gala&details=A%20Hack%20Club%20Event%20by%20@amogh&dates=20200727T000000Z%2F20200727T010000Z",
+    "start": "2020-07-27T00:00:00.000Z",
+    "end": "2020-07-27T01:00:00.000Z",
+    "avatar": "https://dl.airtable.com/.attachmentThumbnails/62ecff6264c8a5b6804c5339d28d8a5e/036a8f96"
+  }
+]

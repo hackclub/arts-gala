@@ -17,10 +17,7 @@ const Post = ({
   mux = [],
   postedAt
 }) => (
-  <Card
-    className="post"
-    sx={{ p: [3, 3], width: '100%', bg: 'rgba(255,255,255,0.9)' }}
-  >
+  <Card className="post" sx={{ p: [3, 3], width: '100%', bg: 'elevated' }}>
     <Flex
       as="a"
       href={`https://scrapbook.hackclub.com/${user.username}`}
@@ -72,13 +69,7 @@ const Post = ({
 )
 
 const Posts = ({ data = [] }) => (
-  <Box
-    as="section"
-    sx={{
-      display: ['none', 'block'],
-      position: 'relative'
-    }}
-  >
+  <Box as="section" sx={{ position: 'relative' }}>
     <Masonry
       breakpointCols={{
         default: 4,
@@ -105,7 +96,14 @@ const Posts = ({ data = [] }) => (
       }
 
       .post {
-        margin-bottom: 2px;
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 32em) {
+        .post {
+          border-left: 0;
+          border-right: 0;
+        }
       }
 
       @media (min-width: 32em) {
@@ -118,7 +116,6 @@ const Posts = ({ data = [] }) => (
         }
 
         .post {
-          border-radius: 12px;
           margin-bottom: 12px;
         }
       }
@@ -153,9 +150,14 @@ const Posts = ({ data = [] }) => (
       </Text>
       <Button
         as="a"
-        variant="cta"
+        variant="outline"
         href="https://scrapbook.hackclub.com/r/art"
-        sx={{ bg: 'fuschia', color: 'white' }}
+        sx={{
+          color: 'fuschia',
+          borderStyle: 'dashed',
+          borderWidth: 1,
+          boxShadow: 'none'
+        }}
       >
         Keep exploring →
       </Button>
