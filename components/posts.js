@@ -1,7 +1,7 @@
 import { Button, Box, Card, Text, Image, Grid, Avatar, Flex } from 'theme-ui'
 import { formatDate } from '../lib/dates'
 import { Fragment, memo } from 'react'
-import { filter } from 'lodash'
+import { last, filter } from 'lodash'
 import Masonry from 'react-masonry-css'
 import Mention from './mention'
 import Emoji from './emoji'
