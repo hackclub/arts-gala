@@ -55,7 +55,6 @@ const Post = ({
   },
   text,
   attachments = [],
-  mux = [],
   postedAt
 }) => (
   <Card className="post" sx={{ p: [3, 3], width: '100%', bg: 'elevated' }}>
@@ -79,7 +78,7 @@ const Post = ({
         </Text>
       </Box>
     </Flex>
-    <Text as="p" fontSize={3}>
+    <Text as="p" fontSize={3} sx={{ a: { variant: 'styles.a' } }}>
       {formatText(text)}
     </Text>
     {attachments.length > 0 && (
@@ -97,7 +96,6 @@ const Post = ({
               sx={{
                 maxWidth: '100%',
                 maxHeight: 256,
-                borderRadius: 'default',
                 bg: 'sunken',
                 gridColumn: attachments.length === 1 ? 'span 2' : null
               }}
