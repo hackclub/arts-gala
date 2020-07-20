@@ -21,7 +21,8 @@ export default ({ events = [], scraps = [] }) => (
       as={Head}
       name="Hack Club Events"
       title="Fine Arts Gala"
-      description="A weeklong celebration of artists in the Hack Club Slack."
+      description="A weeklong celebration of artists in the Hack Club Slack. July 20–27, 2020."
+      image="https://cloud-bw5p4o2o8.vercel.app/2020-07-20_bke7618b4raj3cavaywfcv5hreq2e5z9.jpeg"
     />
     <Flag />
     <Container
