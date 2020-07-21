@@ -8,7 +8,7 @@ import Emoji from './emoji'
 
 const dataDetector = /(<.+?\|?\S+>)|(@\S+)|(`{3}[\S\s]+`{3})|(`[^`]+`)|(_[^_]+_)|(\*[^\*]+\*)|(:[^:\s]{2,24}:)/
 
-export const formatText = text =>
+export const formatText = (text) =>
   text.split(dataDetector).map((chunk, i) => {
     if (chunk?.startsWith(':')) {
       return <Emoji name={chunk} key={i} />
@@ -88,7 +88,7 @@ const Post = ({
           columns={2}
           sx={{ alignItems: 'center', textAlign: 'center', mt: 2 }}
         >
-          {filter(attachments, a => a.type.startsWith('image')).map(img => (
+          {filter(attachments, (a) => a.type.startsWith('image')).map((img) => (
             <Image
               key={img.thumbnails.large.url}
               alt={img.filename}
@@ -119,7 +119,7 @@ const Posts = ({ data = [] }) => (
       className="masonry-posts"
       columnClassName="masonry-posts-column"
     >
-      {data.map(post => (
+      {data.map((post) => (
         <Post key={post.id} {...post} />
       ))}
     </Masonry>

@@ -92,7 +92,7 @@ export default ({ events = [], scraps = [] }) => (
         4 events across the week.
       </Heading>
       <Grid columns={[2, 3, 4]} gap={3}>
-        {events.map(event => (
+        {events.map((event) => (
           <Event {...event} key={event.id} />
         ))}
       </Grid>
@@ -141,10 +141,10 @@ export const getStaticProps = async () => {
   let scraps = []
   const { take, filter, shuffle, orderBy, map } = require('lodash')
   let posts = await fetch('https://scrapbook.hackclub.com/api/r/art')
-    .then(r => r.json())
-    .then(posts => orderBy(posts, 'postedAt', 'desc'))
-    .then(posts =>
-      filter(posts, p =>
+    .then((r) => r.json())
+    .then((posts) => orderBy(posts, 'postedAt', 'desc'))
+    .then((posts) =>
+      filter(posts, (p) =>
         ['image/jpg', 'image/jpeg', 'image/png'].includes(
           p.attachments?.[0]?.type
         )
@@ -155,9 +155,9 @@ export const getStaticProps = async () => {
   const eventIds = map(events, 'id')
   // Gracefully update events from API if possible
   await fetch('https://events.hackclub.com/api/events/all')
-    .then(r => r.json())
-    .then(events => filter(events, e => eventIds.includes(e.id)))
-    .then(e => {
+    .then((r) => r.json())
+    .then((events) => filter(events, (e) => eventIds.includes(e.id)))
+    .then((e) => {
       if (e.length > 2) events = e
     })
   return { props: { events, scraps }, unstable_revalidate: 8 }

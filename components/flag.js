@@ -39,7 +39,7 @@ const Base = styled('a')`
   }
 `
 
-const Flag = props => (
+const Flag = (props) => (
   <Base href="https://hackclub.com/" title="Homepage" {...props} />
 )
 
