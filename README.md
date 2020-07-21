@@ -2,6 +2,9 @@
 
 # Hack Club Fine Arts Gala
 
+![format](https://github.com/hackclub/arts-gala/workflows/format/badge.svg)
+![build](https://github.com/hackclub/arts-gala/workflows/build/badge.svg)
+
 A weeklong celebration of artists in the Hack Club Slack. July 20–27, 2020.
 
 ---
